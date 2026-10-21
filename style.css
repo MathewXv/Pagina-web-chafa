@@ -1,0 +1,129 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  padding: 32px 16px;
+  font-family: Arial, sans-serif;
+  color: #2d2538;
+
+  /* Fondo con la imagen de Pinterest */
+  background-image: url(Img/fondo\ 2.jpg);
+  background-size: cover;       /* Cubre toda la pantalla sin deformarse */
+  background-position: center;  /* Centra la imagen */
+  background-repeat: no-repeat; /* Evita que se repita */
+  background-attachment: fixed; /* Mantiene la imagen fija al hacer scroll */
+}
+
+/* Contenedor central que agrupa todo */
+.contenedor-principal {
+  max-width: 900px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+/* Tarjeta Principal (Hero) */
+.tarjeta-hero {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  padding: 36px;
+  border: 3px solid #2d2538;
+  border-radius: 24px;
+  background: rgba(248, 222, 129, 0.95);
+  box-shadow: 8px 8px 0 #94c2e3;
+}
+
+.contenido-hero {
+  flex: 1 1 300px;
+}
+
+.etiqueta {
+  color: #087e8b;
+  font-weight: bold;
+  letter-spacing: 2px;
+  margin-top: 0;
+}
+
+h1 {
+  font-size: clamp(2rem, 5vw, 3.2rem);
+  margin: 12px 0;
+}
+
+/* Estilos de la imagen de presentación */
+.imagen-perfil {
+  flex: 0 0 160px;
+  display: flex;
+  justify-content: center;
+}
+
+.imagen-perfil img {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 3px solid #2d2538;
+  box-shadow: 4px 4px 0 #087e8b;
+}
+
+/* Grid para los 4 recuadros */
+.grid-tarjetas {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 20px;
+}
+
+/* Estilo individual para cada uno de los 4 recuadros */
+.tarjeta-info {
+  padding: 24px;
+  border: 3px solid #2d2538;
+  border-radius: 20px;
+  background: #ffffff;
+  box-shadow: 6px 6px 0 #94c2e3;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.tarjeta-info:hover {
+  transform: translateY(-4px);
+  box-shadow: 8px 8px 0 #087e8b;
+}
+
+.tarjeta-info .icono {
+  font-size: 2rem;
+  margin-bottom: 8px;
+}
+
+.tarjeta-info h2 {
+  font-size: 1.25rem;
+  margin-top: 0;
+  margin-bottom: 12px;
+  color: #087e8b;
+}
+
+.tarjeta-info p {
+  line-height: 1.5;
+  margin-bottom: 16px;
+}
+
+/* Botón estilizado */
+.boton {
+  display: inline-block;
+  padding: 10px 18px;
+  border-radius: 999px;
+  color: white;
+  background: #2d2538;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 0.9rem;
+  transition: background 0.2s;
+}
+
+.boton:hover {
+  background: #087e8b;
+}
